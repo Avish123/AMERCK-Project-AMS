@@ -8,7 +8,7 @@ new class extends Component {
     use Toast;
 
     public $company;
-    public $name, $address, $email, $phone;
+    public $name, $address, $email, $phone, $description;
     public $active = true;
 
     protected $rules = [
@@ -16,6 +16,7 @@ new class extends Component {
         'address' => 'required',
         'email' => 'required|email',
         'phone' => 'required',
+        'description' => 'required',
     ];
 
     public function mount($id = null)
@@ -62,6 +63,7 @@ new class extends Component {
         <x-input type="email" label="Email" wire:model="email" />
         <x-input type="tel" label="Phone" wire:model="phone" />
         <x-input type="text" label="Address" wire:model="address" />
+        <x-input type="text" label="Description" wire:model="description" />
         <x-toggle label="Active" wire:model="active" class="my-3" />
         <x-button class="btn-primary" type="submit" spinner="save">Save</x-button>
         @if ($company)

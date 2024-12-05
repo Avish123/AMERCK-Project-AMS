@@ -42,7 +42,7 @@ new class extends Component {
             <p>📧 {{ $user->email }}</p>
             <p>📞 {{ $user->phone }}</p>
             <p>👤 {{ $user->role }}</p>
-            <p>🏢 {{$user->company->name}}</p>
+            <p>🏢 {{$user->name}}</p>
             @if ($user->active == 1)
             <x-badge value="Active" class="bg-success text-white" />
             @else

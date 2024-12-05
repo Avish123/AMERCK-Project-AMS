@@ -36,6 +36,7 @@ new class extends Component {
                 <p>📍 {{ $company->address }}</p>
                 <p>📧 {{ $company->email }}</p>
                 <p>📞 {{ $company->phone }}</p>
+                <p>📝{{$company->description}}</p>
                 @if ($company->active == 1)
                     <x-badge value="Active" class="bg-success text-white" />
                 @else
